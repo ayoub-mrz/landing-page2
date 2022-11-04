@@ -1,0 +1,109 @@
+nav .container{
+    @extend .center-f;
+    justify-content: space-between;
+    height: 15vh;
+    > a {
+        height: 4vh;
+        aspect-ratio: 1;
+        img {
+            height: 100%;
+        }
+    } 
+    .Navigation_Container {
+        height: 4vh;
+        aspect-ratio: 1;
+        .navigation_switch {
+            @extend .wide;
+            cursor: pointer;
+            img:first-of-type {
+                width: 100%;
+            }
+            img:last-of-type {
+                width: 80%;
+            }
+        }
+        ul.mobile {
+            width: 85%;
+            background-color: #fff;
+            position: absolute;
+            top: 12vh;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 1rem;
+            border-radius: 3px;
+            box-shadow: 0 5px 10px 2px #0000001c;
+            opacity: 1;
+            transition: .5s;
+            &.hide {
+                top: 8vh;
+                opacity: 0;
+            }
+            li {
+                width: 100%;
+                padding-block: .55rem;
+                &:last-of-type {
+                    padding-bottom: .85rem;
+                    border-bottom: 1px solid #0000001f;
+                }
+                a {
+                    color: $Very-Dark-Blue;
+                    font-size: 1.15em;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+            button {
+                font-size: 1.15em;
+                font-weight: 600;
+                color: $Dark-Grayish-Blue;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: .85rem;
+            }
+        }
+    }
+    ul.desktop {
+        @extend .center-f;
+        li {
+            margin-inline: 0.85rem;
+            &:last-of-type {
+                margin-right: 2.65rem;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+            a {
+                color: $Very-Dark-Blue;
+                font-size: 1.05em;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: hsl(230deg, 29%, 20%);
+            }
+        }
+        button {
+            color: $Dark-Grayish-Blue;
+            margin-left: 2.65rem;
+            font-size: 1.10em;
+            font-weight: 500;
+            text-transform: uppercase;
+            position: relative;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+            &::before {
+                content: '';
+                background-color: $Grayish-Blue;
+                padding: .2rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: calc(-2.65rem + -.1rem);
+                border-radius: 50%;
+                pointer-events: none;
+            }
+        }
+    }
+}
