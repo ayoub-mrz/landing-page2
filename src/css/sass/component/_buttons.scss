@@ -29,4 +29,7 @@
 }
 .btn-wob {
     color: $Grayish-Blue;
+    &:hover {
+        text-decoration: underline;
+    }
 }

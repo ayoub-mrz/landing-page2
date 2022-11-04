@@ -108,6 +108,9 @@ a {
 .btn-wob {
   color: hsl(231deg, 7%, 65%);
 }
+.btn-wob:hover {
+  text-decoration: underline;
+}
 
 nav .container {
   justify-content: space-between;
